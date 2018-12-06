@@ -1,0 +1,12 @@
+name: XRankup
+version: ${project.version}
+main: me.xa5.xrankup.XRankup
+authors: [xA5]
+description: Rankup plugin
+website: https://github.com/Blayyke
+depend: [Vault]
+commands:
+  rankup:
+    aliases: [ru]
+    permission: 'xrankup.rankup'
+    description: 'Rankup to the next available rank.'

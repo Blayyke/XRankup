@@ -1,0 +1,31 @@
+# Various failure messages sent by the plugin.
+messages:
+  cannot-afford: "&c&lError: &7You do not have the ${cost} required to rankup."
+  not-a-player: "&c&lError: &7Only players can use /rankup."
+  final-rank: "&c&lError: &7You are already at the final rank."
+  no-rankup-found: "&c&lError: &7No rankup configured for your rank."
+# The final rank that can be reached
+final-rank: D
+# The actions to perform on any rankup
+rankup-actions:
+  - '[broadcast] &a{player} ranked up to {rank}'
+  - '[message] &aYou have ranked up to {rank} for ${cost}.'
+  - '[addgroup] {rank}'
+  - '[removegroup] {oldrank}'
+  - 'warp {rank} {player}'
+rankups:
+  default:
+    next: B
+    display-name: A
+    cost: 15000
+    actions: []
+  B:
+    next: C
+    cost: 50000
+    actions: []
+  C:
+    next: D
+    cost: 150000
+    # Rank-specific actions
+    actions:
+      - '[broadcast] &a&l{player} has reached the final rank of {rank}!'
